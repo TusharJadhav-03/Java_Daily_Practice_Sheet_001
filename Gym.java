@@ -1,4 +1,5 @@
-
+// Gym Membership Program
+// 8-11-2025 date.
 import java.util.Scanner;
 public class Gym {
     public static void Operation(String name, int plan){
