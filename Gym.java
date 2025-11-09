@@ -1,5 +1,6 @@
 // Gym Membership Program
 // 8-11-2025 date.
+// This program allows users to select a gym membership plan and displays the total amount to pay based on their selection.
 import java.util.Scanner;
 public class Gym {
     public static void Operation(String name, int plan){
