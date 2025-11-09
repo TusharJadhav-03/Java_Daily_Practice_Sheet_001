@@ -7,7 +7,7 @@ public class Store{
        }
        else if(monthlySalary >= 20001 && monthlySalary <= 50000){
            double rate = monthlySalary *12/100;
-            System.out.println("Monthly Comission Rate. "+rate);
+            System.out.println("Monthly Comission Rate.. "+rate);
        }
        else if(monthlySalary > 50001){
            double rate = monthlySalary *31/100;
