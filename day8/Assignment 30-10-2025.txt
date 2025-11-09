@@ -1,0 +1,186 @@
+Lab Assigement : 1
+
+public class ATMAccount {
+    long accountNumber;
+    double balance;
+    
+public static void withdraw(double amount, ATMAccount account){
+    
+        if(amount>account.balance){
+            System.out.println("RS. "+amount+" rejected insuficient funds plese try again");
+        }else if(amount<0){
+        double remainingBalance = account.balance -(-amount);
+            System.out.println("Withdraw succesful RS. "+amount+ " Remaining Balance RS. "+remainingBalance);
+        }else {
+            double updatedBalance = account.balance + amount;
+            System.out.println("Deposite Succesful RS. "+amount+" Updated Balance RS. "+updatedBalance);
+        }
+    }
+    
+    public static void main(String []args){
+        ATMAccount account = new ATMAccount();
+        account.accountNumber = 12345678901L;
+        account.balance = 10000.0;
+        ATMAccount.withdraw(12000, account);
+}
+}
+
+Lab Assigement : 2
+
+
+public class StudentAdmission{
+    String studentName;
+    int id ;
+    static String collegeName = "vasantrao naik";
+    
+    public static void main(String []args){
+        StudentAdmission s1 = new StudentAdmission();
+        s1.studentName = "tushar";
+        s1.id = 123;
+        System.out.println("Student 1: ");
+        System.out.println("Student Name: "+s1.studentName);
+        System.out.println("Student id: "+s1.id);
+        System.out.println("Student college: "+collegeName);
+        
+        StudentAdmission s2 = new StudentAdmission();
+        s2.studentName = "sudam";
+        s2.id = 321;
+        System.out.println("\nStudent 2: ");
+        System.out.println("Student Name: "+s2.studentName);
+        System.out.println("Student id: "+s2.id);
+        System.out.println("Student college: "+collegeName);
+    }
+}
+
+
+Lab Assigement : 3
+
+
+public class Main
+{
+    public static void main(String []args){
+    Flipcart cart = new Flipcart(); // 1010
+    cart.price = 500;
+    cart.quantity = 2;
+    cart.calculateTotal();
+}
+}
+ class Flipcart{
+    double price;
+    int quantity;
+    
+    public void calculateTotal(){
+        double total = price * quantity;
+        System.out.println("Total Amount to Pay RS. "+total);
+    }
+}
+
+
+Lab Assigement : 4
+
+public class Car{
+    String brand;
+    String color;
+    double price;
+    
+    public void displayDetails(int carNumber){
+        System.out.println("Car "+carNumber+" : Brand "+brand+ ", color: "+color+ ", Price: "+price);
+    }
+    public static void main(String []args){
+        Car c1 = new Car();
+        c1.brand = "Tesla";
+        c1.color = "Red";
+        c1.price = 45000;
+        c1.displayDetails(1);
+        
+        
+        Car c2 = new Car();
+        c2.brand = "BMW";
+        c2.color = "Black";
+        c2.price = 75000;
+        c2.displayDetails(2);
+        
+        Car c3 = new Car();
+        c3.brand = "Toyota";
+        c3.color = "Blue";
+        c3.price = 95000;
+        c3.displayDetails(3);
+        
+    }
+}
+
+Lab Assigement : 5
+
+public class Employee{
+   String name;         
+   double salary;       
+   static String companyName ="Harman pvt.Ltd";
+   
+   public void calculateBonus(){
+       double bonus = 0.10 * salary;
+       System.out.println("Name: "+name+" Salary: "+salary+" Company Name: "+companyName+" Bonus: "+bonus);
+   }
+   public static void main(String []args){
+       Employee e1 = new Employee();
+       e1.name = "tushar";
+       e1.salary = 80000;
+       e1.calculateBonus();
+       
+       Employee e2 = new Employee();
+       e2.name = "mohan";
+       e2.salary = 40000;
+       e2.calculateBonus();
+       
+       Employee e3 = new Employee();
+       e3.name = "sudam";
+       e3.salary = 20000;
+       e3.calculateBonus();
+   }
+}
+
+
+Lab Assigement : 6
+
+public class Student{
+    String name;
+    static String collegeName = "Vasantrao Naik. ";
+  
+    public static void main(String []args){
+        Student s1 = new Student();
+        s1.name = "Tushar";
+        System.out.println("studen 1: Name: "+s1.name+", college Name: "+collegeName);
+        
+        Student s2 = new Student();
+        s2.name = "Sudam";
+        System.out.println("studen 1: Name: "+s2.name+", college Name: "+collegeName);
+        
+        Student s3 = new Student();
+        s3.name = "Mohan";
+        System.out.println("studen 1: Name: "+s3.name+", college Name: "+collegeName);
+
+    }
+}
+
+Lab Assigement : 7
+
+public class Counter{
+    static int count = 0;
+    public Counter(){
+        count++;
+    }
+    
+    public static void main(String []args){
+        Counter c1 = new Counter();
+        Counter c2 = new Counter();
+        Counter c3 = new Counter();
+        Counter c4 = new Counter();
+        Counter c5 = new Counter();
+        
+        System.out.println("Number of Object Created:  "+count);
+    }
+}
+
+
+
+
+
