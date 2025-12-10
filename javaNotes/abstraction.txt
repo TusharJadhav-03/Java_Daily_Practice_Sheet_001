@@ -1,0 +1,283 @@
+1. Which of these keywords are used to define an abstract class?
+a) abstraction
+b) abstract
+c) Abstract
+d) abstract class
+Answer: abstract
+
+2.If a class inheriting an abstract class does not define all of its function
+then it will be known as?
+a) Abstract
+b) A simple class
+c) Static class
+d) None of the mentioned
+Answer: Abstract
+
+3. Which of these is not a correct statement?
+a) Every class containing abstract method must be declared abstract
+b) Abstract class defines only the structure of the class not its implementation
+c) Abstract class can be initiated by new operator(object can be created)
+d) Abstract class can be inherited
+Answer: Abstract class can be initiated by new operator(object can be created)
+
+4. What will be the output of the following Java code?
+    class A
+    {
+        public int i;
+        private int j;
+    }    
+    class B extends A
+    {
+        void display()
+        {
+            super.j = super.i + 1;
+            System.out.println(super.i + " " + super.j);
+        }
+    }    
+    class MainClass
+   {
+        public static void main(String args[])
+        {
+            B obj = new B();
+            obj.i=1;
+            obj.j=2;  
+            obj.display();    
+        }
+   }
+a) 2 2
+b) 3 3
+c) Runtime Error
+d) Compilation Error
+Answer: Compilation Error
+
+5.What will be the output of the following Java code?
+
+    class A
+    {
+        public int i;
+        public int j;
+        A(){
+            i = 1;
+            j = 2;
+    }
+    }    
+    class B extends A
+    {
+        int a;
+    B()
+        {
+            super();
+        }
+    }    
+    class MainClass
+    {
+        public static void main(String args[])
+        {
+            B obj = new B();
+            System.out.println(obj.i + " " + obj.j)    
+        }
+   }
+a) 1 2
+b) 2 1
+c) Runtime Error
+d) Compilation Error
+Answer: 1 2
+
+6. What will be the output of the following Java code?
+    class A
+    {
+        int i;
+        void display()
+        {
+            System.out.println(i);//i = 0
+        }
+    }    
+    class B extends A
+    {
+        int j;
+        void display()
+        {
+            System.out.println(j);//j =0
+        }
+    }    
+    class MainClass
+    {
+        public static void main(String args[])
+        {
+            B obj = new B();
+            obj.i=1;
+            obj.j=2;  
+            obj.display();    
+        }
+   }
+a) 0
+b) 1
+c) 2
+d) Compilation Error
+Answer: 2
+
+7. What will be the output of the following Java code?
+
+    class A
+    {
+        public int i;
+        protected int j;
+    }    
+    class B extends A
+    {
+        int j;
+        void display()
+        {
+            super.j = 3;
+            System.out.println(i + " " + j);
+        }
+    }    
+    class Output
+    {
+        public static void main(String args[])
+        {
+            B obj = new B();
+            obj.i=1;
+            obj.j=2;  
+            obj.display();    
+        }
+   }
+a) 1 2
+b) 2 1
+c) 1 3
+d) 3 1
+Answer: 1 2
+
+8.What will be the output of the following Java program?
+
+        class A
+        {
+            int i;
+            void display()
+            {
+                System.out.println(i);
+            }
+        }    
+        class B extends A
+        {
+            int j;
+            void display()
+            {
+                System.out.println(j);
+            }
+        }    
+        class MainClass
+        {
+            public static void main(String args[])
+            {
+                B obj = new B();
+                obj.i=1;
+                obj.j=2;  
+                obj.display();    
+            }
+       }
+    a) 0
+    b) 1
+    c) 2
+    d) Compilation Error
+Answer: 2
+
+9.What will be the output of the following Java program?
+
+    class A
+    {
+        int i;  
+    }    
+    class B extends A
+    {
+        int j;      // int i=1;  j=2
+        void display()
+        {
+            super.i = j + 1;
+            System.out.println(j + " " + i);
+        }
+    }    
+    class inheritance
+    {
+        public static void main(String args[])
+        {
+            B obj = new B();
+            obj.i=1;
+            obj.j=2;  
+            obj.display();    
+        }
+   }
+a) 2 2
+b) 3 3
+c) 2 3
+d) 3 2
+Answer: 2 3
+
+10.What will be the output of the following Java program?
+
+    class A
+    {
+        public int i;
+        public int j;
+        A()
+        {
+            i = 1;
+            j = 2;
+    }
+    }    
+    class B extends A
+    {
+        int a;
+        B()
+        {
+            super();
+        }
+    }    
+    class super_use
+    {
+        public static void main(String args[])
+        {
+            B obj = new B();
+            System.out.println(obj.i + " " + obj.j)    
+        }
+   }
+a) 1 2
+b) 2 1
+c) Runtime Error
+d) Compilation Error
+Answer: 1 2
+
+Programming Questions:
+1. WAP for the below requirement
+   Create  a method in supermost class
+   Perform method overriding in last sub class
+   Create object and call the method
+ 
+2. WAP for the below requirement
+   Create a super class and three sub classes
+   Create a method in super class
+   Perform method overriding in 1st sub class and 3rd sub class
+   Create all three subclass objects and call the methods from main method
+
+3. WAP for the below requirement
+   Create a super class
+   Create two incomplete methods
+   Complete both the methods in sub class
+
+4. WAP for the below requirement
+   Create two abstract methods in super class
+   Complete first method in immediate sub class
+   Complete second method in next level of sun class
+   Create objects and call the methods
+
+5.WAP for the below requirement
+   Create an incomplete method in super class
+   Create three subclasses
+   Complete the method in all sub classes
+   Create objects and call the methods from main method
+
+6. WAP for the below requirement
+   Create a super class
+   Create a final non static method
+   Try to perform method oevrriding in sub class
+   Note the issues.
