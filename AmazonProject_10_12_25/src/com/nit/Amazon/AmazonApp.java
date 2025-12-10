@@ -6,7 +6,6 @@ abstract class Ecommerce{
 	public abstract void addToCart();
 	
 }
-// changes for git push
 class Login{
 	private String userName;
 	private String password;
